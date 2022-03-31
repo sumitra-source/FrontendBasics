@@ -1,55 +1,35 @@
-/*Element Selectors
-h1 {
-  color: red;
+/*Inheritance*/
+body {
+  font-family: monospace;
+  line-height: 1.5em;
+}
+
+div {
+  color: green;
+  border: 3px solid black;
 }
 
 h2 {
-  color: green;
+  color: blue;
+}
+p {
+  color: blue;
 }
 
 p {
-  color: grey;
-
-body {
+  color: red;
+}
+.red {
   color: red;
 }
 
-h1,
-h2 {
+p {
   color: blue;
-}}*/
-/*ID
-#title {
-  color: green;
-  background: black;
 }
-#title {
-  font-size: 40px;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-div {
-  color: black;
-  background: grey;
-}
-
-#subheading {
+/*last rule and specifity*universal selector*/
+p{
   color: red;
-  background: grey;
-}*/
-/*class selector*/
-.green{
-  color: green;
 }
-.red{
-  color: red;
-  background: grey;
+*{
+  color: blue;
 }
-
-span{
-  text-transform: uppercase;
-}
-
-
