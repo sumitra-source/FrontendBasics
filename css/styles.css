@@ -1,35 +1,88 @@
-/*Inheritance*/
-body {
-  font-family: monospace;
-  line-height: 1.5em;
+font-size,width,height,pixels
+h1 {
+  font-size: 60px;
+  width: 200px;
+  height: 300px;
+  background: pink;
+}
+
+Percent values-Relative
+.outer {
+  width: 400px;
+  height: 200px;
+  background: burlywood;
+}
+
+
+.inner {
+  width: 100%;
+  height: 50%;
+  background: pink;
+}
+
+/*em-RELATIVE depends on parent
+1em=16px default browser style;
+1em=base value
+rem=RELATIVE depends on root 1 rem=16px default browser style;*/
+
+html {
+  font-size: 32px;
 }
 
 div {
-  color: green;
-  border: 3px solid black;
+  font-size: 40px;
 }
 
+.relative {
+  font-size: 2rem;
+}
+
+.absolute {
+  font-size: 64px;
+}
+
+
+vh-height-percent of the screen
+vw-width-percent of the screen
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 50vw;
+  height: 50vh;
+  background: red;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: blueviolet;
+}
+
+default browser styles and google dev tool
 h2 {
-  color: blue;
-}
-p {
-  color: blue;
+  color: rebeccapurple;
+  font-size: 50px;
 }
 
-p {
-  color: red;
-}
-.red {
-  color: red;
-}
+calc()
+perform  math operations + - * /
+mix and match values
 
-p {
-  color: blue;
-}
-/*last rule and specifity*universal selector*/
-p{
-  color: red;
-}
+min-height: 100vh;
 *{
-  color: blue;
+  margin:0;
+}
+.navbar{
+  background: palevioletred;
+  height: 100px;
+  color: blueviolet;
+  font-size: 3rem;
+}
+.banner{
+  background:rebeccapurple;
+  min-height: calc(100vh - 100px);
 }
