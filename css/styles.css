@@ -1,47 +1,30 @@
-/*font-size font-family
-
+/*
+line-height
+letter-spacing
+word-spacing
+text-transform
+text-decoration
 */
-font-stack generic-family
-serif,sans-serif,cursive,fantasy,monospace
-
-body {
-  font-family: 'Courier New', Courier, monospace;
+a{
+  font-size: 40px;
+  text-decoration: none;
 }
-
-h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:ital,wght@0,400;1,700&display=swap');
-
-/*Google Fonts
-
- */
 body{
-font-family: 'Roboto',
-sans-serif;
-font-style:italic;
-
-font-weight: lighter;
-
-font-style: normal;
-text-align: right;
-
+  text-transform: capitalize;
 }
-.main{
-  font-family: 'Hurricane',
-  cursive;
-  font-style:oblique;
-  text-align: center;
-}
-.subheading{
-
+h1{
+  text-transform: lowercase;
+  text-decoration: line-through;
 }
 .one{
-font-weight:bold;
-text-indent: 10rem;
+  line-height: 0.5em;
+  text-decoration: overline;
+  line-height: 2rem;
 }
 .two{
-
-   text-align: left;
+  letter-spacing: 5px;
+}
+.three{
+  word-spacing:20px;
+  text-decoration: underline;
 }
