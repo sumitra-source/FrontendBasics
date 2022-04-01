@@ -1,127 +1,90 @@
-last rule order
+
+.two{
+  float: left;
+    height: 300px;
+}
+
+p {
+  clear: both;
+}
+.banner {
+  border: 5px solid royalblue;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.one {
+  float: right;
+  margin-left: 50px;
+
+}
 
 div {
+  float: left;
   height: 400px;
-  color: blueviolet;
+  width: 33.33%;
 }
 
-div {
-  height: 300px;
-  color: cornflowerblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-background-position
-  background-repeat: repeat-x;
-  background-repeat: space;
-  background-repeat: round;
-  background-size: cover;
-  background-position: center;
-  background-position:bottom;
-  background-position: left;
-  background-position: right;
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  div {
-    min-height: 100vh;
-    color: firebrick;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .big-img {
-    background: url('./bigimage.webp');
-    background-repeat: round;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  .small-img {
-    background: url('./folderimage/a.jpeg');
-    background-repeat: repeat;
-    background-repeat: no-repeat;
-  
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  
-  }
-  
-  .folder-img {
-    background: url('./bigimage.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  body {
-    display: flex;
-  }
-  
-  div {
-    width: 150px;
-    height: 150px;
-    margin: 5px;
-  }
-  
-  .one {
-    background: linear-gradient(green, blue);
-  }
-  
-  .two {
-    background: linear-gradient(to top, green, blue, yellow, red);
-  }
-  
-  .three {
-    background: linear-gradient(150deg, green, blue);
-  }
-  
-  .four {
-    background: linear-gradient(to top right, green, blue);
-  }
-  
-  .five {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
-  }
-  
-  .six {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.9));
-  }*/
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-  }
-  div{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 60px;
-    color: indianred;
-  }
-  .banner{
-    background: url('./bigimage.webp');
-      background-position: center;
-      background-size: cover;
-    background-repeat: no-repeat;
-    
-    background-attachment: fixed;
-  }
-  .header{
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url("./bigimage.webp")/ 
-        center/cover/ fixed no-repeat;
-  }
-  
+
+.one {
+
+  background: pink;
+
+}
+
+.two {
+  background: royalblue;
+}
+
+.three {
+  background: goldenrod;
+}
+
+h1 {
+  clear: both;
+    text-align: right;
+      text-align: left;
+        left:20rem;
+        right:50%;
+        position:relative;
+        top:50px;
+        
+        bottom: 200px;
+}
+/*position fixed*/
+button{
+  background: plum;
+  font-size: 40px;
+  color: darkblue;
+  position: fixed;
+  top:0;
+  right:0;
+}
+div{
+  border: 3px solid red;
+  background: yellowgreen;
+  margin-top: 40px;
+
+
+}
+.one{
+  background: blueviolet;
+
+ 
+}
+.two {
+  background: goldenrod;
+
+}
+.special{
+  background: lightcoral;
+  font-size:20px;
+  position: absolute;
+  top:50%;
+  right: 50%;
+}
