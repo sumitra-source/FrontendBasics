@@ -1,46 +1,32 @@
 
-css VARIABLES AKA Custom Properties
-hold a value and reuse it
---varName:value
-property:var(--varName)
-scope
-:root{}===global
-element===local
-any property
-.heading{
-  color:blueviolet
-}
-.text{
-  color:#384754;
-}
-.main-text{
-  color:#342353;
-}
-.second-heading{
-  color:#034233;
+ICONS
+Font-Awesome Icons
+Free,Easy to get up running,simple syntax
+.fa-car {
+  color: goldenrod;
 }
 
-:root{
-  --primaryColor:#1313f3;
-  --secondaryColor:#642839;
-  --mainTransition:all 0.4s linear;
+.social-icon {
+  font-size: 4rem;
+  color: blueviolet;
 }
-.heading{
-  color: var(--primaryColor);
+/*
+text-shadow
+box-shadow
+*/
+h1{
+  text-shadow: 11px 11px 6px rgba(206, 89, 55, 0.62)
 }
-.second-heading {
-  color: var(--primaryColor);
-  transition: var(--mainTransition);
+.box{
+  width:200px;
+  height: 100px;
+  background: burlywood;
+  margin:20px;
+
+  transition: all 0.5s linear;
 }
-.second-heading:hover{
-   color: var(--secondaryColor);
-}
-div{
-  --primaryRed:red;
-}
-.main-text{
-  color:var(--primaryRed);
-}
-.third-heading{
-  color:var(--primaryRed);
+.box:hover{
+box-shadow: 37px 42px 26px 73px rgba(0, 0, 0, 0.75);
+-webkit-box-shadow: 37px 42px 26px 73px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 37px 42px 26px 73px rgba(0, 0, 0, 0.75);
 }
