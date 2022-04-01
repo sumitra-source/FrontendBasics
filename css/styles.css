@@ -1,260 +1,162 @@
-Media Queries
-Responsive Design
-Style Elements on Different Screen Sizes
-min-width:--starting from
-@media screen and (min-width: 768px) {
-  body {
-    background: hotpink;
-  }
+transform:translate(),scale(),rotate(),skew()
+  transform: translate(75%);
+  transform: translateY(30px);
+  transform: translate(200px, 300px);
+    transform: scaleY(2);
+      transform: scale(1.5, 1.5);
+      transform: skew(40deg, 20deg);
+      transform: skewY(-20deg);
+      transform: skewX(40deg);
+      
+        transition-duration: 4s,
+        2s;
+        transition-delay: 3s 2s,
+        border-radius 5s 1s;
+        
+        div {
+          width: 300px;
+          height: 150px;
+          display: inline-block;
+        }
+        
+        div:hover {
+          background: palevioletred;
+        }
+        
+        .one {
+          background: paleturquoise;
+        
+        }
+        
+        .two {
+          background: palegreen;
+        
+        
+        
+        }
+        
+        .three {
+          background: darkorange;
+          transition-property: background, border-radius;
+          transition: all 4s 5s;
+        
+        }
+        
+        .three:hover {
+          border-radius: 50%;
+        }
+        
+        div {
+          width: 100px;
+          height: 100px;
+          background: blueviolet;
+          color: black;
+          margin: 15px;
+          transition: all 1s linear;
+        }
+        
+        div:hover {
+          transform: translateX(100px)
+        }
+        
+        .ease {
+          transition: all 2s ease;
+          transition-timing-function: ease;
+        }
+        
+        .linear {
+          transition-timing-function: linear;
+        }
+        
+        .ease-in {
+          transition-timing-function: ease-in;
+        }
+        
+        .ease-out {
+          transition-timing-function: ease-out;
+        }
+        
+        .ease-in-out {
+          transition-timing-function: ease-in-out;
+        }
+        
+        animation-name: move;
+        animation-duration: 10s;
+        animation-iteration-count: 2s;
+        
+        .div {
+          width: 200px;
+          height: 100px;
+          color: brown;
+          margin: 10px;
+        }
+        
+        .transition {
+          background: royalblue;
+          transition: all 2s linear;
+        }
+        
+        .transition:hover {
+          background: yellowgreen;
+          transform: translateX(100px);
+        }
+        
+        .animation {
+          background: blueviolet;
+          animation: move 5s infinite;
+        
+        }
+        
+        @keyframes move {
+          0% {
+            transform: translateX(20px);
+          }
+        
+          50% {
+            transform: translateX(100px);
+            background: plum;
+          }
+        
+          75% {
+            transform: translateX(-200px);
+            background: yellow;
+          }
+        
+          100% {
+            transform: translateX(20px);
+            background: green;
+          }
+        }
+            /*animation-fill-mode:what values are applied by the animation outside the time it is executing*/
+        .div{
+         width:200px;
+         height: 100px;
+         color: brown;
+         margin: 10px;
+        }
+       
+        .animation{
+          background: blueviolet;
+          animation: move 5s 2;
+          animation-fill-mode: forwards;
 
-  .banner {
-    background: skyblue;
-  }
-
-  h1 {
-    color: darkcyan;
-    font-size: 60px;
-    text-align: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-max-width:--up to
-body {
-  background: yellowgreen;
-}
-
-.banner {
-  background: blueviolet;
-  border-radius: 20px;
-}
-
-h1 {
-  color: black;
-  text-align: center;
-  text-decoration: underline;
-  text-transform: capitalize;
-}
-
-@media screen and (max-width: 576px) {
-  body {
-    background: palevioletred;
-  }
-
-  .banner {
-    background: antiquewhite;
-  }
-
-  h1 {
-    color: blue;
-    font-size: 60px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    background: hotpink;
-  }
-
-  .banner {
-    background: skyblue;
-  }
-
-  h1 {
-    color: darkcyan;
-    font-size: 60px;
-    text-align: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-}
-Mobile First/
-*z-index---z-axis
-position:static--doesnot work
-  z-index: 0;
-  img {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-  }
-  
-  .banner {
-    margin: 2opx;
-    width: 80vw;
-    height: 70vh;
-    border: 5px solid slateblue;
-  }
-  
-  .one {
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 100;
-  
-  }
-  
-  .two {
-    top: 10%;
-    left: 10%;
-    z-index: -1;
-  }
-  
-  .three {
-    top: 20%;
-    left: 20%;
-    z-index: -2;
-  }
-
-  p::after {
-    content: " after";
-    font-weight: bold;
-    font-size: 2rem;
-    color: darkolivegreen;
-    display: block;
-    background: navajowhite;
-  }
-
-p::before{
-  content: "hello ";
-  display: block;
-  background:navajowhite;
-  font-weight: bold;
-  font-size: 2rem;
-  color: darkolivegreen;
-}
-p::after{
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: grey;}
-  div{
-    width: 50vh;
-    margin: 100px auto;
-    position: relative;
-  }
-
-  img{
-    width:100%;
-
-    display: block;
-  }
-  div::before{
-    content: "";
-    border: 2px solid green;
-    width:100%;
-    height: 100%;
-    position:absolute;
-    box-sizing: border-box;
-    top:-40px;
-    left:-40px;
-    z-index: -2;
-        transition:all 0.5s linear;
-  }
-  div::after {
-    content: "";
-   background: goldenrod;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    box-sizing: border-box;
-    top: -20px;
-    left: -20px;
-    z-index: -1;
-    transition:all 0.5s linear;
-  }
-  div:hover::after,
-  div:hover::before{
-    top:0;
-    left:0;
-  }
-  Basic Selectors
-  * {
-    color: red;
-  }
-  
-  #heading {
-    font-size: 40px;
-    text-transform: uppercase;
-    color: cadetblue;
-  }
-  
-  .heading {
-    font-size: 20px;
-    text-transform: capitalize;
-    color: green;
-  }
-  
-  p {
-    letter-spacing: 20px;
-  }
-  Descendant and child combinators
-  
-  .header h1 {
-    color: green;
-  }
-  
-  .header>h1 {
-    color: plum;
-  }
-  
-  div h1 {
-    color: cadetblue;
-  
-  }
-  
-  div>h1 {
-    color: darkolivegreen;
-  }
-  ::first-line ::first-letter
-  p::first-line {
-    font-weight: bold;
-  }
-  
-  p::first-letter {
-    font-size: 3rem;
-  }
-  :hover
-  p:hover {
-    color: blueviolet;
-    font-size: 60px;
-  }
-  
-  .header:hover {
-    background: burlywood;
-    color: seagreen;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
- :link :visited :hover :active
- 
-a:link {
-  color: cadetblue;
-}
-
-a:visited {
-  color: brown;
-}
-
-a:hover {
-  color: rgb(212, 39, 120);
-}
-
-a:active {
-  color: green;
-}
-/*:root root element of the document html element general styles css variables
-background: rebeccapurple;*/
-:root{
- font-size: 150%;
-}
-h1{
-  font-size: 3rem;
-}
-.absolute{
-  font-size: 24px;
-}
-.responsive{
-  font-size: 1.5rem;
-}
- 
+         
+        }
+        @keyframes move {
+          0%{
+            opacity:0;
+          }
+          25%{
+            transform: translateX(200px);
+            opacity:0.25;
+          }
+           50%{
+            transform: translateX(-100px);
+            opacity:1;
+          }
+          100% {
+            transform: translateX(0px);
+            opacity: 0.5;
+          }
+        }
+   
