@@ -1,90 +1,260 @@
+Media Queries
+Responsive Design
+Style Elements on Different Screen Sizes
+min-width:--starting from
+@media screen and (min-width: 768px) {
+  body {
+    background: hotpink;
+  }
 
-.two{
-  float: left;
-    height: 300px;
+  .banner {
+    background: skyblue;
+  }
+
+  h1 {
+    color: darkcyan;
+    font-size: 60px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+max-width:--up to
+body {
+  background: yellowgreen;
 }
 
-p {
-  clear: both;
-}
 .banner {
-  border: 5px solid royalblue;
-  padding: 10px;
-  overflow: hidden;
-}
-
-.one {
-  float: right;
-  margin-left: 50px;
-
-}
-
-div {
-  float: left;
-  height: 400px;
-  width: 33.33%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.one {
-
-  background: pink;
-
-}
-
-.two {
-  background: royalblue;
-}
-
-.three {
-  background: goldenrod;
+  background: blueviolet;
+  border-radius: 20px;
 }
 
 h1 {
-  clear: both;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background: palevioletred;
+  }
+
+  .banner {
+    background: antiquewhite;
+  }
+
+  h1 {
+    color: blue;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: hotpink;
+  }
+
+  .banner {
+    background: skyblue;
+  }
+
+  h1 {
+    color: darkcyan;
+    font-size: 60px;
     text-align: right;
-      text-align: left;
-        left:20rem;
-        right:50%;
-        position:relative;
-        top:50px;
-        
-        bottom: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 }
-/*position fixed*/
-button{
-  background: plum;
-  font-size: 40px;
-  color: darkblue;
-  position: fixed;
-  top:0;
-  right:0;
+Mobile First/
+*z-index---z-axis
+position:static--doesnot work
+  z-index: 0;
+  img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  .banner {
+    margin: 2opx;
+    width: 80vw;
+    height: 70vh;
+    border: 5px solid slateblue;
+  }
+  
+  .one {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+  
+  }
+  
+  .two {
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+  }
+  
+  .three {
+    top: 20%;
+    left: 20%;
+    z-index: -2;
+  }
+
+  p::after {
+    content: " after";
+    font-weight: bold;
+    font-size: 2rem;
+    color: darkolivegreen;
+    display: block;
+    background: navajowhite;
+  }
+
+p::before{
+  content: "hello ";
+  display: block;
+  background:navajowhite;
+  font-weight: bold;
+  font-size: 2rem;
+  color: darkolivegreen;
 }
-div{
-  border: 3px solid red;
-  background: yellowgreen;
-  margin-top: 40px;
+p::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: grey;}
+  div{
+    width: 50vh;
+    margin: 100px auto;
+    position: relative;
+  }
 
+  img{
+    width:100%;
 
-}
-.one{
-  background: blueviolet;
-
+    display: block;
+  }
+  div::before{
+    content: "";
+    border: 2px solid green;
+    width:100%;
+    height: 100%;
+    position:absolute;
+    box-sizing: border-box;
+    top:-40px;
+    left:-40px;
+    z-index: -2;
+        transition:all 0.5s linear;
+  }
+  div::after {
+    content: "";
+   background: goldenrod;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+    transition:all 0.5s linear;
+  }
+  div:hover::after,
+  div:hover::before{
+    top:0;
+    left:0;
+  }
+  Basic Selectors
+  * {
+    color: red;
+  }
+  
+  #heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: cadetblue;
+  }
+  
+  .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: green;
+  }
+  
+  p {
+    letter-spacing: 20px;
+  }
+  Descendant and child combinators
+  
+  .header h1 {
+    color: green;
+  }
+  
+  .header>h1 {
+    color: plum;
+  }
+  
+  div h1 {
+    color: cadetblue;
+  
+  }
+  
+  div>h1 {
+    color: darkolivegreen;
+  }
+  ::first-line ::first-letter
+  p::first-line {
+    font-weight: bold;
+  }
+  
+  p::first-letter {
+    font-size: 3rem;
+  }
+  :hover
+  p:hover {
+    color: blueviolet;
+    font-size: 60px;
+  }
+  
+  .header:hover {
+    background: burlywood;
+    color: seagreen;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+ :link :visited :hover :active
  
+a:link {
+  color: cadetblue;
 }
-.two {
-  background: goldenrod;
 
+a:visited {
+  color: brown;
 }
-.special{
-  background: lightcoral;
-  font-size:20px;
-  position: absolute;
-  top:50%;
-  right: 50%;
+
+a:hover {
+  color: rgb(212, 39, 120);
 }
+
+a:active {
+  color: green;
+}
+/*:root root element of the document html element general styles css variables
+background: rebeccapurple;*/
+:root{
+ font-size: 150%;
+}
+h1{
+  font-size: 3rem;
+}
+.absolute{
+  font-size: 24px;
+}
+.responsive{
+  font-size: 1.5rem;
+}
+ 
