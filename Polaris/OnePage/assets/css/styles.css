@@ -1,0 +1,9 @@
+.counts .count-box span {
+    font-size: 48px;
+    line-height: 48px;
+    display: block;
+    font-weight: 700;
+    color: #124265;
+    margin-left: 80px;
+    margin: auto;
+}
